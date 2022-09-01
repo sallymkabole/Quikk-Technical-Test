@@ -284,7 +284,7 @@ export default {
       color: black;
       padding: 0 0.5em;
       line-height: 1.5em;
-      color: black;
+      color: #000;
       background-color: #fcfcfa;
   }
   
