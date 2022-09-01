@@ -49,7 +49,7 @@
           </v-navigation-drawer>
           <v-toolbar  flat height="100%" class="navba" >
             <v-toolbar-side-icon class="hidden-md-and-up white--text" @click="drawer = !drawer">
-              <v-icon color="#fff">mdi-menu</v-icon>
+              <v-icon color="000 ">mdi-menu</v-icon>
             </v-toolbar-side-icon>
 
             <v-flex xs6 sm6 md2 lg2>
