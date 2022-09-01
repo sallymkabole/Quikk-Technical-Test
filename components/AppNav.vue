@@ -95,10 +95,9 @@ export default {
       selectedItem: 0,
       items: [
         { text: 'Home', icon: 'mdi-home', to: "/", },
-        { text: 'Send', icon: 'mdi-share', to: "/sendg", },
-        { text: 'Top Up', icon: 'mdi-upload', to: "/to", },
-        { text: 'Transact', icon: 'mdi-cash', to: "/blog", },
-        { text: 'Logout', icon: 'mdi-information', to: "/about-us", },
+        { text: 'Send', icon: 'mdi-share', to: "/send", },
+        { text: 'Top Up', icon: 'mdi-upload', to: "/", },
+        { text: 'Logout', icon: 'mdi-information', to: "/auth/login", },
         
       ],
     };
