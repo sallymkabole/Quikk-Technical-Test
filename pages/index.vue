@@ -91,7 +91,7 @@ height: 100%;">
 
 
 
-                    <v-btn class="btn1" large rounded block color="#335eea" @click="deposit" :disabled="!valid">
+                    <v-btn class="btn1 white--text" large rounded block color="#335eea" @click="deposit" :disabled="!valid">
                       Top Up </v-btn>
                   </v-form>
 
@@ -182,6 +182,7 @@ height: 100%;">
 
 </template>
 <script>
+  import { mapGetters } from "vuex";
 import axios from "axios";
 export default {
   name: "index",
@@ -229,9 +230,106 @@ export default {
       my_phone: "",
       balance: 0,
     },
+    num_rules: (val) => {
+        if (val < 50) return "Minimum  amount is 50";
+        return true;
+      },
 
     right: null,
   }),
+  mounted() {
+      // this.getbalance();
+    },
+    methods: {
+      countryChanged(country) {
+        this.country = "+" + country.dialCode;
+  
+      },
+      deposit() {
+        let bal = 0
+        let newBal = parseInt(this.userInfo.balance) + parseInt(this.userInfo.top_amount)
+        console.log(newBal)
+        this.userInfo.balance = newBal
+        /*const userPhone = this.userInfo.my_phone;
+  
+  
+  
+        const AITRABLE_BASE_ID = "appAC0VgHCJlUd9UB";
+        const AIRTABLE_BASE_NAME = "User";
+  
+  
+        axios
+          .get(
+            //`https://api.airtable.com/v0/${AITRABLE_BASE_ID}/${AIRTABLE_BASE_NAME}`,
+            `https://api.airtable.com/v0/${AITRABLE_BASE_ID}/${AIRTABLE_BASE_NAME}?fields=Phone&filterByFormula=SEARCH("${userPhone}",+Phone)`,
+  
+  
+            {
+              headers: {
+                Authorization: "Bearer keyFdAypJPpjvsOqT",
+              },
+            }
+          )
+          .then((res) => {
+            // load the API response into items for datatable
+            this.records = res.data.records;
+            const my_contacts = Object.entries(this.records);
+            //my_contacts =this.records
+  
+            for (const my_contact of my_contacts) {
+  
+              this.contacts.push(my_contact[1]['fields']['Phone']);
+  
+              console.log(my_contact[1]['id']);
+  
+  
+            }*/
+        //this.userInfo.balance = this.records[0]['fields']['Balance']
+        // check if any records were returned
+  
+  
+  
+      },
+      getbalance() {
+        const userPhone = this.userInfo.my_phone;
+  
+  
+  
+        const AITRABLE_BASE_ID = "appAC0VgHCJlUd9UB";
+        const AIRTABLE_BASE_NAME = "User";
+  
+  
+        axios
+          .get(
+            //`https://api.airtable.com/v0/${AITRABLE_BASE_ID}/${AIRTABLE_BASE_NAME}`,
+            `https://api.airtable.com/v0/${AITRABLE_BASE_ID}/${AIRTABLE_BASE_NAME}?fields=Phone&fields=Balance&fields=Fullname&fields=Email&filterByFormula=SEARCH("${userPhone}",+Phone)`,
+  
+  
+            {
+              headers: {
+                Authorization: "Bearer keyFdAypJPpjvsOqT",
+              },
+            }
+          )
+          .then((res) => {
+            // load the API response into items for datatable
+            this.records = res.data.records;
+            console.log(res)
+            //this.userInfo.balance = this.records[0]['fields']['Balance']
+            // check if any records were returned
+  
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+  
+      },
+  
+  
+  
+  
+  
+    },
 
 };
 </script>
@@ -252,7 +350,7 @@ export default {
       width: 100%;
       height: 5px;
       background-color: #7c69ef;
-      opacity: .7;
+    
       color: #fff;
       padding: 42px;
   }
@@ -284,10 +382,10 @@ export default {
       height: 100px;
   }
   .add-course {
-      background-image: url(~/assets/images/dash-bg.svg);
+      background-image: url(~/assets/images/profile-bg.jpg);
       background-size: cover;
       background-position: center center;
-      opacity: .7;
+    
      
   }
   .profile-card {
