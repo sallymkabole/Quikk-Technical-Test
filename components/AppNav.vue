@@ -22,10 +22,10 @@
                   justify-content:flex-end;
                   width: 100%;
                 " class="my-auto">
-                  <a href="/send" class="link-btn mr-4 black--text font-weight-bold pt-2">Top up</a>
+                  <a href="/" class="link-btn mr-4 black--text font-weight-bold pt-2">Top up</a>
                  
                  
-                  <a href="/" class="link-btn mr-4 black--text font-weight-bold pt-2"> Transact</a>
+                  <a href="/send" class="link-btn mr-4 black--text font-weight-bold pt-2"> Transact</a>
 
                  
                 </div>
