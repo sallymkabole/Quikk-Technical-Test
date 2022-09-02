@@ -4,72 +4,28 @@
       <v-layout column style=" z-index: 2;
   position: relative;">
         <span class="">
-          <v-navigation-drawer width="85%" app v-model="drawer" disable-resize-watcher>
-            <v-list>
-              <v-list-item>
-                <v-list-item-action>
-                  <v-avatar size="26px">
-                    <img alt="Avatar" src="~assets/images/bg.webp" />
-                  </v-avatar>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title> Jane Doe</v-list-item-title>
-                  <v-list-item-subtitle class="text-wrap">janedoe1825@gmail.com</v-list-item-subtitle>
-                </v-list-item-content>
-                <v-list-item-action>
-                  <v-btn to="my-profile" fab icon>
-                    <v-icon>mdi-chevron-right</v-icon>
-                  </v-btn>
-                </v-list-item-action>
-              </v-list-item>
-
-              <v-list-item link>
-                <v-list-item-content>
-                  <v-list-item-title class="text-h6">
-                    Jane Doe
-                  </v-list-item-title>
-                  <v-list-item-subtitle>janedoe1825@gmail.com</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-            <v-divider></v-divider>
-            <v-list nav dense>
-              <v-list-item-group v-model="selectedItem" color="primary">
-                <v-list-item v-for="(item, i) in items" :key="i" :to="`${item.to}`">
-                  <v-list-item-icon>
-                    <v-icon v-text="item.icon"></v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title v-text="item.text"></v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list-item-group>
-            </v-list>
-          </v-navigation-drawer>
+         
           <v-toolbar  flat height="100%" class="navba" >
-            <v-toolbar-side-icon class="hidden-md-and-up white--text" @click="drawer = !drawer">
-              <v-icon color="000 ">mdi-menu</v-icon>
-            </v-toolbar-side-icon>
-
-            <v-flex class="hidden-sm-and-down" xs6 sm6 md2 lg2>
+            
+            <v-flex class="" xs6 sm6 md2 lg2>
               <div style="" class="d-flex flex-column logo my-auto">
                 <a href="/"
               ><img alt="Avatar" class="logo" src="~assets/images/logo.png"
             /></a>
               </div>
             </v-flex>
-            <v-flex xs12 sm12 md10 lg10 class="hidden-sm-and-down">
+            <v-flex xs12 sm12 md10 lg10 class=
+            "">
               <div>
                 <div style="
                   display: flex;
                   justify-content:flex-end;
-                  width: 90%;
+                  width: 100%;
                 " class="my-auto">
-                  <a href="/send" class="link-btn mr-4 black--text font-weight-bold pt-2">Send Money</a>
+                  <a href="/send" class="link-btn mr-4 black--text font-weight-bold pt-2">Top up</a>
                  
                  
-                  <a href="/" class="link-btn mr-4 black--text font-weight-bold pt-2"> History</a>
+                  <a href="/" class="link-btn mr-4 black--text font-weight-bold pt-2"> Transact</a>
 
                  
                 </div>
@@ -193,7 +149,7 @@ li a:hover {
 
 @media screen and (max-width: 600px) {
   .link-btn {
-    width: 10px;
+    
     font-size: 10px;
     font-weight: bold;
   }
