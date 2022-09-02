@@ -74,7 +74,7 @@ height: 100%;">
                                 <div style="width: 100%" class="d-flex d-inline-flex ma-2">
                                     <hr class="hr-text" data-content="or" />
                                 </div>
-                                <v-form v-model="valid">
+                                <v-form>
 
 
                                     <h5 class="text-left">Amount to Send</h5>
@@ -91,7 +91,7 @@ height: 100%;">
 
 
 
-                                    <v-btn class="btn1" block color="##335eea" @click="transact" :disabled="!valid">
+                                    <v-btn class="btn1" block color="##335eea" @click="transact" >
                                         Send </v-btn>
                                 </v-form>
                                 <v-card-text class="text-center">
@@ -190,7 +190,7 @@ height: 100%;">
 import { mapGetters } from "vuex";
 import axios from "axios";
 export default {
-  name: "index",
+  name: "send",
   layout: "default",
   computed: {
         ...mapGetters(["getUser"]),

@@ -205,7 +205,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+  background-image: linear-gradient(135deg, #fff,#446aec);
   opacity: 0.7;
 }
 
@@ -286,7 +286,7 @@ ul {
 }
 
 li:hover {
-  background-color: #7c69ef;
+  background-color: #addc8e;
   color: white;
   text-decoration: none;
 }
@@ -305,7 +305,7 @@ li a.active {
 }
 
 li a:hover {
-  background-color: #7c69ef;
+  background-color: #addc8e;
   color: white;
   text-decoration: none;
 }

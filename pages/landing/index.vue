@@ -161,7 +161,8 @@
     import axios from "axios";
     //import Notification from "~/components/Notification";
     export default {
-        name: "Send",
+        name: "landing",
+        layout: "default",
     
         components: {
             // Notification,

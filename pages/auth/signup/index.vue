@@ -202,8 +202,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
-  opacity: 0.7;
+  background-image: linear-gradient(135deg, #fff,#446aec);  opacity: 0.7;
 }
 
 .login-card::after {

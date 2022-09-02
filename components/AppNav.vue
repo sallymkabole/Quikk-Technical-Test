@@ -52,7 +52,7 @@
               <v-icon color="000 ">mdi-menu</v-icon>
             </v-toolbar-side-icon>
 
-            <v-flex xs6 sm6 md2 lg2>
+            <v-flex class="hidden-sm-and-down" xs6 sm6 md2 lg2>
               <div style="" class="d-flex flex-column logo my-auto">
                 <a href="/"
               ><img alt="Avatar" class="logo" src="~assets/images/logo.png"
@@ -161,7 +161,7 @@ ul {
 }
 
 li:hover {
-  background-color: #7c69ef;
+  background-color: #addc8e;
   color: white;
   text-decoration: none;
 }
