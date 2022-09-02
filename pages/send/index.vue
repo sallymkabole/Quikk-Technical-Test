@@ -187,12 +187,17 @@ height: 100%;">
 
 </template>
 <script>
+import { mapGetters } from "vuex";
 import axios from "axios";
 export default {
   name: "index",
   layout: "default",
+  computed: {
+        ...mapGetters(["getUser"]),
+    },
   data: () => ({
-    page: 1,
+    contacts: [],
+  
     my_transactions: [
 
       {
@@ -230,17 +235,19 @@ export default {
     selectedItem: "",
     rating: "4.3",
     userInfo: {
-      top_amount: "",
-      my_phone: "",
-      balance: 0,
-    },
-
+            send_amount: "",
+            recipient_phone: "",
+        },
+    num_rules: (val) => {
+            if (val < 50) return "Minimum  amount is 50";
+            return true;
+        },
     right: null,
   }),
   mounted() {
         this.getContact()
     },
-    methods: {
+  methods: {
         getContact() {
             const userPhone = this.userInfo.my_phone;
             const AITRABLE_BASE_ID = "appAC0VgHCJlUd9UB";
@@ -333,7 +340,7 @@ export default {
                             }
                         );
                     } else {
-                        alert("Invalid Credentials!");
+                        alert("Cannot Send to this number");
                     }
                     this.userInfo.balance = this.records[0]['fields']['Balance']
                     // console.log(this.userInfo.balance)
