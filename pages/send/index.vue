@@ -473,7 +473,7 @@ export default {
   }
   
   li:hover {
-      background-color: #addc8e;
+      background-color: #7c69ef;
       color: white;
       text-decoration: none;
   }
@@ -492,7 +492,7 @@ export default {
   }
   
   li a:hover {
-      background-color: #addc8e;
+      background-color: #7c69ef;
       color: white;
       text-decoration: none;
   }

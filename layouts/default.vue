@@ -61,7 +61,7 @@ export default {
 }
 
 .site-footer {
-  background-color: #1b2a4e;
+  background-color: #7c69ef;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
@@ -86,7 +86,7 @@ export default {
 }
 
 .site-footer a {
-  color: #737373;
+  color: black;
 }
 
 .site-footer a:hover {

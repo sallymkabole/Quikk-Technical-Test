@@ -252,6 +252,7 @@ export default {
       width: 100%;
       height: 5px;
       background-color: #7c69ef;
+      opacity: .7;
       color: #fff;
       padding: 42px;
   }
@@ -283,8 +284,10 @@ export default {
       height: 100px;
   }
   .add-course {
-      background-image: url(~/assets/images/quikkdev.jpg);
+      background-image: url(~/assets/images/dash-bg.svg);
       background-size: cover;
+      background-position: center center;
+      opacity: .7;
      
   }
   .profile-card {
@@ -308,7 +311,7 @@ export default {
       text-decoration: none;
   }
   li:hover {
-      background-color: #addc8e;
+      background-color: #7c69ef;
       color: white;
       text-decoration: none;
   }
@@ -324,7 +327,7 @@ export default {
       text-decoration: none;
   }
   li a:hover {
-      background-color: #addc8e;
+      background-color: #7c69ef;
       color: white;
       text-decoration: none;
   }

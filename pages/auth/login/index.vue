@@ -286,7 +286,7 @@ ul {
 }
 
 li:hover {
-  background-color: #addc8e;
+  background-color: #7c69ef;
   color: white;
   text-decoration: none;
 }
@@ -305,7 +305,7 @@ li a.active {
 }
 
 li a:hover {
-  background-color: #addc8e;
+  background-color: #7c69ef;
   color: white;
   text-decoration: none;
 }
